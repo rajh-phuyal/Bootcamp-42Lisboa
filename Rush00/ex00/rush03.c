@@ -6,11 +6,11 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 20:33:01 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/10 20:33:20 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/11 17:34:36 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_putchar.c"
+void	ft_putchar(char c);
 
 void	print_line_edge(int x)
 {
@@ -79,4 +79,3 @@ void	rush(int x, int y)
 		print_line_edge(x);
 	}
 }
-

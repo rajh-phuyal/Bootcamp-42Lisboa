@@ -6,11 +6,11 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 20:30:15 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/10 20:32:10 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/11 17:34:28 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_putchar.c"
+void	ft_putchar(char c);
 
 void	print_line_top(int x)
 {
@@ -103,4 +103,3 @@ void	rush(int x, int y)
 		print_line_bot(x);
 	}
 }
-
