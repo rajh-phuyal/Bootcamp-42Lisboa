@@ -6,12 +6,11 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:18:47 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/12 15:32:32 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:35:12 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
