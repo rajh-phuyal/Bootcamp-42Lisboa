@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:18:47 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/12 00:05:32 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:32:32 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,10 @@ void	ft_putnbr(int nb)
 	int	rev_num;
 
 	rev_num = reverse_number(nb);
-	while(rev_num > 0)
+	while (rev_num > 0)
 	{
 		ft_putchar(rev_num % 10 + 48);
 		rev_num = rev_num / 10;
 	}
 	ft_putchar('\n');
-	
-}
-
-int	main(void)
-{
-	ft_putnbr(42224544);
 }

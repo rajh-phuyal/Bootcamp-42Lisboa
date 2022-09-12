@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:47:14 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/08 16:04:07 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:30:24 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,4 @@ void	ft_is_negative(int n)
 		result = 'P';
 	}
 	write(1, &result, 1);
-}
-
-int	main(void)
-{
-	return (0);
 }

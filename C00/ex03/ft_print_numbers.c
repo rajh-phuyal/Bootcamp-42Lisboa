@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:00:40 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/08 15:44:08 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:29:32 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_numbers(void)
 		write(1, &i, 1);
 		i++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_numbers();
 }

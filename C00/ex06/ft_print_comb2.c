@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:20:44 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/11 14:01:54 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:31:04 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,4 @@ void	ft_print_comb2(void)
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
 }

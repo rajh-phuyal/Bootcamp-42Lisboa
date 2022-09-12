@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:26:26 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/08 14:36:23 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:27:56 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,4 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putchar('k');
 }
