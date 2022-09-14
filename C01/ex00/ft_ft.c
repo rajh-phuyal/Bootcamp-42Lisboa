@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 21:40:17 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/13 21:42:52 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/14 10:37:25 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,4 @@
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-
-int main(void)
-{
-	int nbr;
-
-	ft_ft(&nbr);
-	printf("%d", nbr);
 }
