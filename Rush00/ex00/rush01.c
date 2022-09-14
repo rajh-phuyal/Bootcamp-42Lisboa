@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 20:30:15 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/11 17:34:28 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/14 17:25:01 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,9 @@ void	print_special(int x)
 void	rush(int x, int y)
 {
 	int	mid;
-
+	
+	if (x <= 0 || y <= 0)
+		return;
 	mid = y - 2;
 	print_line_top(x);
 	if (mid >= 0)

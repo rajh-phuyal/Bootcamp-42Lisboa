@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 20:36:31 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/11 17:32:21 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/14 17:25:15 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void	rush(int x, int y);
 
 int	main(void)
 {
-	rush(5, 5);
+	rush(1, 0);
 	return (0);
 }
