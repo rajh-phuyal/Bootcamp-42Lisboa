@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:45:35 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 16:32:38 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/15 21:30:07 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/15 22:07:11 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_lowercase(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	if (*str == '\0')
-		return (1);
-	while (*str != '\0')
-	{ 
-		if (*str >= 97 && *str <= 122)
-			str++;
-		else
-			return (0);
+	unsigned int	lenght;
+
+	lenght = 0;
+	if (size != 0)
+	{
+		while (*src != '\0')
+		{
+			if (lenght < size - 1)
+				*dest = *src;
+				dest++;
+				*dest = '\0';
+			src++;
+			lenght++;
+		}
 	}
-	return (1);
+	return (lenght);
 }
 
-/*int main(void)
+/*int	main()
 {
-	char	first[] = "abcd";
-	char	second[] = "Abdg";
-	char	third[] = "";
+	char src[] = "copy this, not this";
+	char dest[] = "copy it here";
+	unsigned int	size;
 
-	printf("%i", ft_str_is_lowercase(first));
-	printf("%i", ft_str_is_lowercase(second));
-	printf("%i", ft_str_is_lowercase(third));
+	size = 10;
+	printf("%d | %s", ft_strlcpy(dest, src, size), dest);
 }*/

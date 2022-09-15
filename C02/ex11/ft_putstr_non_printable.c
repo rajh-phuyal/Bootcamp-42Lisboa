@@ -1,38 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:55:30 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 16:38:02 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/15 22:07:51 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/15 23:38:33 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_str_is_printable(char *str)
+void	ft_putchar(char c)
 {
-	if (*str == '\0')
-		return (1);
+	write(1, &c, 1);
+}
+
+void	print_hex_number(int number)
+{
+	if (number => 0 && number <= 9)
+		ft_putchar(number + 48);
+	else
+	{
+		ft_putchar("0123456789abcdef"[number / 16]);
+		print_hex_number(number % 10);
+	}
+}
+
+void	ft_putstr_non_printable(char *str)
+{
 	while (*str != '\0')
 	{
 		if (*str >= 32 && *str <= 126)
-			str++;
+			ft_putchar(*str);
 		else
-			return (0);
+		{
+			ft_putchar('\\');
+			print_hex_number(*str);
+		}
+		str++;
 	}
-	return (1);
 }
 
-/*int main(void)
+int	main(void)
 {
-	char	first[] = "ABCD";
-	char	second[] = "\n";
-	char	third[] = "asf34qfas][./,!$$^4~~VCSETUWERGfbdsfbhetwyetQAg2658674734";
-
-	printf("%i", ft_str_is_printable(first));
-	printf("%i", ft_str_is_printable(second));
-	printf("%i", ft_str_is_printable(third));
-}*/
+	char	str[] = "Hey \r this is a test!";
+	ft_putstr_non_printable(str);
+}

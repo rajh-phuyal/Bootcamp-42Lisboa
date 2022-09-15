@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:55:30 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 16:38:02 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/15 16:38:41 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/15 17:13:59 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+char	*ft_strupcase(char *str)
 {
-	if (*str == '\0')
-		return (1);
+	char	*str_copy;
+
+	str_copy = str;
 	while (*str != '\0')
 	{
-		if (*str >= 32 && *str <= 126)
-			str++;
-		else
-			return (0);
+		if (*str >= 97 && *str <= 122)
+			*str -= 32;
+		str++;
 	}
-	return (1);
+	return (str_copy);
 }
 
 /*int main(void)
 {
-	char	first[] = "ABCD";
-	char	second[] = "\n";
-	char	third[] = "asf34qfas][./,!$$^4~~VCSETUWERGfbdsfbhetwyetQAg2658674734";
+	char	first[] = "abcd";
+	char	second[] = "AbCdE";
+	char	third[] = "aB554gF.,';";
 
-	printf("%i", ft_str_is_printable(first));
-	printf("%i", ft_str_is_printable(second));
-	printf("%i", ft_str_is_printable(third));
+	printf("%s", ft_strupcase(first));
+	printf("%s", ft_strupcase(second));
+	printf("%s", ft_strupcase(third));
 }*/

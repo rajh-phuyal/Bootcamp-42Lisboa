@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:35:55 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 13:08:21 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/15 17:42:17 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ int	ft_str_is_alpha(char *str)
 		return (1);
 	while (*str != '\0')
 	{
-		if (*str >= 'A' && *str <= 'Z')
-			str++;
-		else if (*str >= 'a' && *str <= 'z')
+		if ((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
 			str++;
 		else
 			return (0);
@@ -28,7 +26,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	first[] = "abcd";
 	char	second[] = "abcd1";
@@ -37,4 +35,4 @@ int	ft_str_is_alpha(char *str)
 	printf("%i", ft_str_is_alpha(first));
 	printf("%i", ft_str_is_alpha(second));
 	printf("%i", ft_str_is_alpha(third));
-}*/
+}

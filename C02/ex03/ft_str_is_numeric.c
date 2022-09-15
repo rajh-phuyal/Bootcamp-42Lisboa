@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 13:06:05 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 13:43:32 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/15 16:33:35 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_str_is_numeric(char *str)
 		return (1);
 	while (*str != '\0')
 	{
-		if (*str >= '0' && *str <= '9')
+		if (*str >= 48 && *str <= 57)
 			str++;
 		else
 			return (0);
