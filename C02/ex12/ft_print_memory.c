@@ -1,37 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 10:56:35 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/16 14:18:55 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/16 14:13:14 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/16 15:53:18 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	char	*dest_copy;
-
-	dest_copy = dest;
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (dest_copy);
-}
-
-/*int	main(void)
-{
-	char	dest[] = {"here"};
-	char	src[] = {"copy"};
-
-	printf("dest = %s", ft_strcpy(dest, src));
-	printf(" | src = %s", src);
-}*/

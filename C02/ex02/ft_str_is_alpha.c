@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:35:55 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 17:42:17 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:21:40 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	first[] = "abcd";
 	char	second[] = "abcd1";
@@ -35,4 +35,4 @@ int	main(void)
 	printf("%i", ft_str_is_alpha(first));
 	printf("%i", ft_str_is_alpha(second));
 	printf("%i", ft_str_is_alpha(third));
-}
+}*/

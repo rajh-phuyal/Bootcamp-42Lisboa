@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 13:45:35 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 16:32:38 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/16 15:44:26 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_lowercase(char *str)
 	if (*str == '\0')
 		return (1);
 	while (*str != '\0')
-	{ 
+	{
 		if (*str >= 97 && *str <= 122)
 			str++;
 		else
