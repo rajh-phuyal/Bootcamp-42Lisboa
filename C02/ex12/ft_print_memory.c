@@ -6,7 +6,8 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:13:14 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/16 15:53:18 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/17 23:08:15 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void*ft_print_memory(void*addr, unsigned int size);

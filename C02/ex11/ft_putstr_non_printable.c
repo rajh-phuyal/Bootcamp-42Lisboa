@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 22:07:51 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/16 14:12:41 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/17 23:01:22 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	ft_putstr_non_printable(char *str)
 
 /*int	main(void)
 {
-	char	str[] = "Hey \r this is a test!";
+	char	str[] = "Hey \r this is a test 42!";
 	ft_putstr_non_printable(str);
 }*/

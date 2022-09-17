@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:18:22 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 21:28:52 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/17 22:56:51 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ char	*ft_strcapitalize(char *str)
 
 /*int	main(void)
 {
-	char	str[] = "salut, comment tu vas ? 42mots quaRante-deux; cinquante+et+un";
+	char	str[] = "Hello 42how r ,u?";
 	printf("%s", ft_strcapitalize(str));
 }*/

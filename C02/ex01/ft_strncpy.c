@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:11:59 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 12:35:01 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/17 22:45:41 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-/*
-int main(void)
+/*int main(void)
 {
 	char	src[] = "copy this, not this";
 	char	dest[] = "copy here";

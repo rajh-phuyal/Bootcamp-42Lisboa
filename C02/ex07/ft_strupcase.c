@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 16:38:41 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/15 17:13:59 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/17 22:52:57 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strupcase(char *str)
 	char	second[] = "AbCdE";
 	char	third[] = "aB554gF.,';";
 
-	printf("%s", ft_strupcase(first));
-	printf("%s", ft_strupcase(second));
-	printf("%s", ft_strupcase(third));
+	printf("%s \n", ft_strupcase(first));
+	printf("%s \n", ft_strupcase(second));
+	printf("%s \n", ft_strupcase(third));
 }*/
