@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 		if (input_not_weird(argv[1]))
 		{
 			if (check_if_solvable(argv[1]))
-				printf("Yes its solvable, But not today!");
+				printf("Yes its solvable, But not today!\n");
 		}
 		else
 		{
