@@ -1,45 +1,42 @@
 
-int	check_the_numbers(char colup, char coldown, char rowleft, char rowright)
+int	check_colums(char colup, char coldown)
 {
-	char	compare_chars[4];
-	int		i;
-
-	i = 0;
-	compare_chars = "1234";
-	while (compare_chars != '\0')
-	{
-		if (compare_chars == colup)
-		{
-			if (coldown == )
-		}
-	}
+	if (colup == '1' && \
+	(coldown == '2' || coldown == '3' || coldown == '4'))
+		return (1);
+	else if (colup == '2' && (coldown == '2' || coldown == '3'))
+		return (1);
+	else
+		return (0);
 }
 
+int	check_rows(char rowleft, char rowrigth)
+{
+	if (rowleft == '1' && \
+	(rowleft == '2' || rowrigth == '3' || rowrigth == '4'))
+		return (1);
+	else if (rowleft == '2' && (rowrigth == '2' || rowrigth == '3'))
+		return (1);
+	else
+		return (0);
+}
 
 int	check_if_solvable(char *str)
 {
-	char	views[4][4];
+	int i;
+	int	j;
 
-	while (*str = '\0')
+	i = 0;
+	j = 16;
+	while (str[i] == '\0')
 	{
-		if(check_the_numbers(str[i], str[i + 4], str[i + 8], str[i + 16])
-		if (str[i] == 4 && str[i + 4] != 1)
+		if (check_colums(i, i+8) && check_colums(j, j+8))
 		{
-			if (str[i] == 4 && str[i + 4] != 1)
-			
-		}
-		}
-			return (0);
-		else if (str[i] == 4 && str[i + 4] != 1)
-		{
-			/* code */
-		}
-		
-		
-			views[i][j] = *str;
+			i++;
 			j++;
+		}
+		else
+			return (0);
 	}
-		j = 0;
-		i++;
-	return (views);
+	return (1);
 }
