@@ -6,11 +6,13 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:43:26 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/19 23:21:55 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 16:16:25 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {

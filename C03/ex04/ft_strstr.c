@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:37:49 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 00:39:42 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 15:06:58 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int		i;
 
 	i = 0;
+	if (!*to_find)
+		return (str);
 	while (*str)
 	{
 		if (*str == *to_find)
@@ -43,12 +45,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		str++;
 	}
-	return ();
+	return (0);
 }
-
-/*int	main()
-{
-	char str[] = "Benguerir Khouribga";
-	char find[] = "piscine";
-	printf("%s", ft_strstr(str, find));
-}*/

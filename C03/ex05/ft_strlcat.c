@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 00:12:13 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 01:17:35 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 15:01:57 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,32 @@ int	get_lenght(char *str)
 	int	lenght;
 
 	lenght = 0;
-	while (*str)
+	while (str[lenght] != '\0')
 		lenght++;
 	return (lenght);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int				t_lenght;
-	char			*dest_copy;
 	unsigned int	i;
+	unsigned int	dest_len;
+	unsigned int	src_len;
 
 	i = 0;
-	dest_copy = dest;
-	t_lenght = get_lenght(dest) + get_lenght(src);
+	dest_len = 0;
 	while (*dest != '\0')
+	{
+		dest_len++;
 		dest++;
-	while (*src != '\0' && i < size - 1)
+	}
+	src_len = get_lenght(src);
+	if (size == 0 || size <= dest_len)
+		return (src_len + size);
+	while (*src != '\0' && i < size - dest_len - 1)
 	{
 		*(dest++) = *(src++);
 		i++;
 	}
 	*dest = '\0';
-	return (t_lenght);
+	return (dest_len + src_len);
 }
-
-int main (void)
-{
-	char src[] = "Born to code";
-    char dest [] = "1337 42";
-    printf("%i \n", ft_strlcat(dest, src, 20));
-    printf("%s \n", dest);
-}	

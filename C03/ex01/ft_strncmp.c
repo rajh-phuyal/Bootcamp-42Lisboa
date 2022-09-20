@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 12:57:33 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/19 15:27:44 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 16:18:28 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 				return (-1);
 		}
 		else if (*s1 == '\0' && *s2 != '\0')
-			return (-1);
+			return (*s1 - *s2);
 		else if (*s1 != '\0' && *s2 == '\0')
-			return (1);
+			return (*s1 - *s2);
 		else
 			return (0);
 	}
