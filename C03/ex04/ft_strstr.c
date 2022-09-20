@@ -1,38 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:55:30 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/19 12:11:46 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/19 19:37:49 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/20 00:39:42 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+int	is_this_is_it(char *start, char *to_find)
 {
-	if (*str == '\0')
-		return (1);
-	while (*str != '\0')
+	while (*to_find)
 	{
-		if (*str >= 32 && *str <= 126)
-			str++;
+		if (*start == *to_find)
+		{
+			start++;
+			to_find++;
+		}
 		else
 			return (0);
 	}
 	return (1);
 }
 
-/*int main(void)
+char	*ft_strstr(char *str, char *to_find)
 {
-	char	first[] = "ABCD";
-	char	second[] = "\n";
-	char	third[] = "asf34qfas][./,!$$^4~~VCSETUWERGfbdsfbhetwyetQAg2658674734";
+	char	*start_sub;
+	int		i;
 
-	printf("%i", ft_str_is_printable(first));
-	printf("%i", ft_str_is_printable(second));
-	printf("%i", ft_str_is_printable(third));
+	i = 0;
+	while (*str)
+	{
+		if (*str == *to_find)
+		{
+			start_sub = str;
+			if (is_this_is_it(start_sub, to_find))
+				return (start_sub);
+		}
+		str++;
+	}
+	return ();
+}
+
+/*int	main()
+{
+	char str[] = "Benguerir Khouribga";
+	char find[] = "piscine";
+	printf("%s", ft_strstr(str, find));
 }*/
