@@ -6,14 +6,24 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 12:57:33 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 16:18:28 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 20:03:07 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <strings.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strcmp1(char *s1, char *s2)
+{
+	unsigned int	inc;
+
+	inc = 0;
+	while ((s1[inc] == s2[inc]) && (s1[inc] != '\0') && (s2[inc] != '\0'))
+		inc++;
+	return (s1[inc] - s2[inc]);
+}
+
+int	ft_strncmp2(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
@@ -39,6 +49,22 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 			return (0);
 	}
 	return (0);
+}
+
+//using pointers, need to move the position of the pointer
+int ft_strcmp(char *src1, char *src2)
+{
+    int i=0;
+    while((*src1!='\0') || (*src2!='\0'))
+    {
+        if(*src1 > *src2)
+            return 1;
+        if(*src1 < *src2)
+            return -1;
+        src1++;
+        src2++;
+    }
+    return 0;
 }
 
 /*int	main()

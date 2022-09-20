@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 11:50:03 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 20:03:11 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/20 16:40:01 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/20 16:46:00 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <strings.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putchar(char c)
 {
-	unsigned int	inc;
+	write(1, &c, 1);
+}
 
-	inc = 0;
-	while ((s1[inc] == s2[inc]) && (s1[inc] != '\0') && (s2[inc] != '\0'))
-		inc++;
-	return (s1[inc] - s2[inc]);
+void	ft_putnbr(int nb )
+{
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + 48);
 }
