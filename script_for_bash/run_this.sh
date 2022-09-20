@@ -6,8 +6,8 @@ echo -------- Norme Check --------
 norminette -R checkforfordbiddensourceheader .
 echo -------- Compilations --------
 cd ./ex00
-# change the values based on the number of exercises
-for exercise in {0,1,2,3,4,5,6,7,8,9}; 
+# change the values based on the number of exercises: {0,1,2,3,4,5,6,7,8,9, ?}
+for exercise in {0,1,2,3,4,5,6,7,8,9};
 do
 	echo -------- EX0$exercise --------
 	if gcc -Wall -Wextra -Werror -o executable *.c

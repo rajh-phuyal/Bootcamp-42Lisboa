@@ -5,20 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 11:50:03 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 20:03:11 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/20 21:48:26 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/20 21:49:45 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <strings.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	inc;
-
-	inc = 0;
-	while ((s1[inc] == s2[inc]) && (s1[inc] != '\0') && (s2[inc] != '\0'))
-		inc++;
-	return (s1[inc] - s2[inc]);
+	while ((*s1 == *s2) && (*s1 && *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }

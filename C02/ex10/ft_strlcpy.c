@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 21:30:07 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/17 22:58:34 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/20 21:02:23 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (lenght);
 }
 
-/*int	main()
+int	main()
 {
 	char src[] = "copy this, not this";
 	char dest[] = "copy it here";
@@ -40,4 +40,4 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	size = 10;
 	printf("%d | %s", ft_strlcpy(dest, src, size), dest);
-}*/
+}
