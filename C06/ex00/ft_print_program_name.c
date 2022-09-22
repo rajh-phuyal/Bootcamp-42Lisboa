@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 16:28:46 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/22 16:27:35 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/22 21:31:21 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/22 21:40:31 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int	ft_strlen(char *str)
+int	main(int argc, char **argv)
 {
-	int	length;
+	int	i;
 
-	length = 0;
-	while (*str)
+	i = 0;
+	while (argv[0][i])
 	{
-		length++;
-		str++;
+		write(1, &argv[0][i], 1);
+		i++;
 	}
-	return (length);
 }
-
-/*int main(void)
-{
-	printf("%i", ft_strlen("Its length should be 23"));
-}*/

@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:35:26 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/20 16:38:22 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/22 16:25:37 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,8 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
+
+/*int main(void)
+{
+	ft_putstr("This is a test");
+}*/
