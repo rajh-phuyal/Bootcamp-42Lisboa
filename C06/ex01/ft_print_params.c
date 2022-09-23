@@ -11,17 +11,28 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	main(int argc, char **argv)
 {
-	int	i;
+	int	index_arr;
+	int	index_argv;
 
-	i = 1;
-	if (argc > 1)
+	index_argv = 1;
+	while (index_argv < argc)
 	{
-		while (i <= argc)
+		index_arr = 0;
+		while (argv[index_argv][index_arr])
 		{
-			
+			ft_putchar(argv[index_argv][index_arr]),
+			index_arr++;
 		}
+		ft_putchar('\n');
+		index_argv++;
 	}
 }
