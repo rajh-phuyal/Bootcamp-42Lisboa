@@ -1,2 +1,45 @@
 1. https://web.njit.edu/~sohna/cs288/hello-memap.pdf
 2. https://www.scaler.com/topics/c/memory-layout-in-c/
+
+
+# storing numbers
+def take_inp():
+    try:
+        inp = int(input('Generate numbers up to ? : '))
+    except  TypeError:
+        print('please enter a positive number !!!')
+        take_inp()
+    return inp
+
+inp = take_inp()
+
+print('Generating numbers please wait......')
+numbers = []
+i = 2
+while i < inp:
+    numbers.append(i)
+    i += 1
+print('Numbers generated')
+# the algorithm
+prime_nums = [1] # because 1 cannot be divided by any number lol
+
+# to mod divide all the elements from the list  -  numbers
+def check(div):
+    for x in numbers:
+        ans = x % div
+        if x != div:
+            if ans == 0:
+                numbers.remove(x)            
+    
+i =  0
+while i <= (len(numbers) - 1):
+    div = numbers[i]
+    check(div)
+    prime_nums.append(numbers[i])
+    i += 1
+    
+print('The prime numbers are : ')
+for i in prime_nums:
+    print(i, end = ",")
+
+input('\n Enter any key to continue ....')
