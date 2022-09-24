@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_sort_params2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 14:20:30 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/24 19:18:46 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/25 00:45:39 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,32 +35,48 @@ void	ft_swap(char *curr, char *new_pos)
 	*new_pos = temp;
 }
 
-char	*sort_string(char *str)
+int	is_str_smaller(char	*str1, char *str2)
 {
-	char	smallest;
-	char	*pos_smallest;
-	char	*sec_iter;
-	char	*str_copy;
-
-	str_copy = str;
-	while (*str)
+	/*if (*str2 = '' || *str1 = '')
+		return (1);*/
+	while (*str1 && *str2)
 	{
-		smallest = *str;
-		pos_smallest = str;
-		sec_iter = str;
-		while (*sec_iter)
-		{
-			if (*sec_iter < smallest)
-			{
-				smallest = *sec_iter;
-				pos_smallest = sec_iter;
-			}
-			sec_iter++;
-		}
-		ft_swap(str, pos_smallest);
-		str++;
+		if (*str2 < *str1)
+			return (1);
+		str1++;
+		str2++;
 	}
-	return (str_copy);
+	return (0);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	while ((*s1 == *s2) && (*s1 && *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}
+
+void	*sort_params(int index_argv, int argc, char **argv)
+{
+	char	*pos_smallest;
+	char	index_arrs;
+
+	while (index_argv < argc)
+	{
+		pos_smallest = argv[index_argv];
+		index_arrs = index_argv;
+		while (index_arrs < argc)
+		{
+			if (is_str_smaller(argv[index_arrs], pos_smallest))
+				pos_smallest = argv[index_arrs];
+			index_arrs++;
+		}
+		ft_swap(argv[index_argv], pos_smallest);
+		index_argv++;
+	}
 }
 
 int	main(int argc, char **argv)
@@ -68,9 +84,10 @@ int	main(int argc, char **argv)
 	int	index_argv;
 
 	index_argv = 1;
+	sort_params(index_argv, argc, argv);
 	while (index_argv < argc)
 	{
-		ft_putstr(sort_string(argv[index_argv]));
+		ft_putstr(argv[index_argv]);
 		ft_putchar('\n');
 		index_argv++;
 	}

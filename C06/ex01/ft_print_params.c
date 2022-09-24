@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 21:41:17 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/23 00:09:20 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/24 14:11:58 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 		index_arr = 0;
 		while (argv[index_argv][index_arr])
 		{
-			ft_putchar(argv[index_argv][index_arr]),
+			ft_putchar(argv[index_argv][index_arr]);
 			index_arr++;
 		}
 		ft_putchar('\n');

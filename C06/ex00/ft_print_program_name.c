@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 21:31:21 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/22 21:40:31 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/24 18:15:54 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	while (argv[0][i])
+	while (argv[0][i] && argc)
 	{
 		write(1, &argv[0][i], 1);
 		i++;
