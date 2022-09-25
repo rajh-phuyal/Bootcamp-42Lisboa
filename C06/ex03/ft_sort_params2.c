@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -26,9 +27,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-void	ft_swap(char *curr, char *new_pos)
+void	ft_swap(char **curr, char **new_pos)
 {
-	char	temp;
+	char	*temp;
 
 	temp = *curr;
 	*curr = *new_pos;
@@ -37,12 +38,10 @@ void	ft_swap(char *curr, char *new_pos)
 
 int	is_str_smaller(char	*str1, char *str2)
 {
-	/*if (*str2 = '' || *str1 = '')
-		return (1);*/
 	while (*str1 && *str2)
 	{
-		if (*str2 < *str1)
-			return (1);
+		if (*str1 < *str2)
+			return (*str1 - *str2);
 		str1++;
 		str2++;
 	}
@@ -50,6 +49,21 @@ int	is_str_smaller(char	*str1, char *str2)
 }
 
 int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] != '\0' || s2[i] != '\0')
+	{
+		if (s1[i] == s2[i])
+			i++;
+		if (s1[i] < s2[i] || s1[i] > s2[i])
+			return (s1[i] - s2[i]);
+	}
+	return (0);
+}
+
+int	ft_strcmp2(char *s1, char *s2)
 {
 	while ((*s1 == *s2) && (*s1 && *s2))
 	{
@@ -67,14 +81,17 @@ void	*sort_params(int index_argv, int argc, char **argv)
 	while (index_argv < argc)
 	{
 		pos_smallest = argv[index_argv];
+		printf("Pos smallest = %p\n", pos_smallest);
 		index_arrs = index_argv;
 		while (index_arrs < argc)
 		{
-			if (is_str_smaller(argv[index_arrs], pos_smallest))
+			//is_str_smaller(argv[index_arrs], pos_smallest) ft_strcmp(pos_smallest, argv[index_arrs]) > 0
+			if (ft_strcmp(pos_smallest, argv[index_arrs]) > 0)
 				pos_smallest = argv[index_arrs];
 			index_arrs++;
 		}
-		ft_swap(argv[index_argv], pos_smallest);
+		//printf("%p | %p\n", argv[index_argv], pos_smallest);
+		ft_swap(&argv[index_argv], &pos_smallest);
 		index_argv++;
 	}
 }

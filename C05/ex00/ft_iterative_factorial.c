@@ -10,12 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_iterative_factorial(int nb)
 {
-	int	result;
+	long	result;
 
-	while (nb > 0)
+	result = nb;
+	while (nb > 1)
 	{
-		
+		nb = nb - 1;
+		result *= nb;
 	}
+	return (result);
 }
+
+/*int main(int argc, char *argv[])
+{
+	printf("%i\n", ft_iterative_factorial(10));
+	return 0;
+}*/
