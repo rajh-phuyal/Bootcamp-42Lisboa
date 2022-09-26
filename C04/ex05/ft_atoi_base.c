@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 23:21:47 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/22 16:18:41 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/25 22:55:27 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_atoi_base(char *str, char *base)
 	if (!base_len)
 		return (0);
 	nminus = scan_str(str);
-	while (*str && (*str <= 32 && *str >= 0) || (*str == 43 || *str == 45))
+	while ((*str && *str <= 32 && *str >= 0) || (*str == 43 || *str == 45))
 		str++;
 	while (*str)
 	{

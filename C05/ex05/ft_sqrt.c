@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 13:47:44 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 13:49:15 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/25 22:40:16 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/26 14:17:41 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_sqrt(int nb)
 {
+	int	divider;
+	int	result;
+
 	if (nb == 1)
 		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	divider = 1;
+	result = nb;
+	while (result >= divider)
+	{
+		result = nb / divider;
+		divider++;
+	}
+	if (result * result != nb)
+		return (0);
+	return (result);
 }
 
-/*int main(int argc, char *argv[])
+/*int	main(void)
 {
-	printf("%i\n", ft_recursive_factorial(5));
-	return 0;
+	printf("%i\n", ft_sqrt(16));
+	return (0);
 }*/

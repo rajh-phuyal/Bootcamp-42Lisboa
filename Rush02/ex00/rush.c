@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   rush.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 13:47:44 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 13:49:15 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/25 19:34:09 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/25 19:34:55 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_recursive_factorial(int nb)
+void    ft_putstr(char *str)
 {
-	if (nb == 1)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+    int i;
+
+    i = 0;
+    while (str[i] != '\0')
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
 }
 
-/*int main(int argc, char *argv[])
+int ft_check_if_dict(int argc, char **argv)
 {
-	printf("%i\n", ft_recursive_factorial(5));
-	return 0;
-}*/
+    if (argc < 3)
+    {
+        return (0);
+    }
+    return (1);
+}

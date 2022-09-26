@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 21:31:21 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/24 18:15:54 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/25 23:38:37 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ int	main(int argc, char **argv)
 		write(1, &argv[0][i], 1);
 		i++;
 	}
+	write(1, &"\n", 1);
 }

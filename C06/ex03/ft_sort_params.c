@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 14:20:30 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/24 19:18:46 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/25 22:12:30 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/25 22:13:32 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,64 +14,59 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+void	put_str(char *str)
 {
 	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
+		ft_putchar(*str++);
 }
 
-void	ft_swap(char *curr, char *new_pos)
+void	ft_swap(char **a, char **b)
 {
-	char	temp;
+	char	*tmp;
 
-	temp = *curr;
-	*curr = *new_pos;
-	*new_pos = temp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-char	*sort_string(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	smallest;
-	char	*pos_smallest;
-	char	*sec_iter;
-	char	*str_copy;
-
-	str_copy = str;
-	while (*str)
+	while (*s1 && *s1 == *s2)
 	{
-		smallest = *str;
-		pos_smallest = str;
-		sec_iter = str;
-		while (*sec_iter)
-		{
-			if (*sec_iter < smallest)
-			{
-				smallest = *sec_iter;
-				pos_smallest = sec_iter;
-			}
-			sec_iter++;
-		}
-		ft_swap(str, pos_smallest);
-		str++;
+		s1++;
+		s2++;
 	}
-	return (str_copy);
+	return (*s1 - *s2);
 }
 
 int	main(int argc, char **argv)
 {
-	int	index_argv;
+	int		index_arrs;
+	int		inc_argc;
 
-	index_argv = 1;
-	while (index_argv < argc)
+	inc_argc = 1;
+	while (inc_argc < argc - 1)
 	{
-		ft_putstr(sort_string(argv[index_argv]));
-		ft_putchar('\n');
-		index_argv++;
+		index_arrs = 1;
+		while (index_arrs < argc - 1)
+		{
+			if (ft_strcmp(argv[index_arrs], argv[index_arrs + 1]) > 0)
+			{
+				ft_swap(&argv[index_arrs], &argv[index_arrs + 1]);
+			}
+			index_arrs++;
+		}
+		inc_argc++;
 	}
+	index_arrs = 1;
+	while (index_arrs < argc)
+	{
+		put_str(argv[index_arrs]);
+		ft_putchar('\n');
+		index_arrs++;
+	}
+	return (0);
 }
