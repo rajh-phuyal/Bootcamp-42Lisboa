@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:55:11 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/26 18:19:25 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:42:49 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_is_prime(int nb)
 	else
 	{
 		divider = 2;
-		while (divider < nb)
+		while (divider <= (nb / divider))
 		{
 			if (nb / divider * divider != nb)
 				divider++;
@@ -37,6 +37,8 @@ int	ft_find_next_prime(int nb)
 {
 	int	inc;
 
+	if (nb < 2)
+		return (2);
 	if (ft_is_prime(nb))
 		return (nb);
 	else

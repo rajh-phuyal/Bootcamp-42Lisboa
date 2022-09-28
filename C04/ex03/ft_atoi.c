@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:46:39 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/21 01:25:59 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 00:22:28 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,18 @@ int	ft_atoi(char *str)
 {
 	int	nminus;
 	int	result;
+	int	l;
 
 	result = 0;
 	nminus = scan_str(str);
-	while (*str && !(*str >= 48 && *str <= 57))
-		str++;
-	while (*str && (*str >= 48 && *str <= 57))
+	l = 0;
+	while ((str[l] >= 9 && str[l] <= 13) || \
+	str[l] == 32 || (str[l] == '-' || str[l] == '+'))
+		l++;
+	while (str[l] && str[l] >= 48 && str[l] <= 57)
 	{
-		result = (*str - 48) + (result * 10);
-		str++;
+		result = (str[l] - 48) + (result * 10);
+		l++;
 	}
 	if (nminus % 2 != 0)
 		result *= -1;

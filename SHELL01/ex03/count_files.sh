@@ -1,1 +1,1 @@
-find . | wc -l | sed 's/ //g'
+find . -type f -o -type d | wc -l | bc

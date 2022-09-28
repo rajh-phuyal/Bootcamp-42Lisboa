@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:26:09 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/17 22:49:10 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:43:18 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,4 @@ int	ft_str_is_uppercase(char *str)
 	printf("%i", ft_str_is_uppercase(first));
 	printf("%i", ft_str_is_uppercase(second));
 	printf("%i", ft_str_is_uppercase(third));
-}*/
+}/*

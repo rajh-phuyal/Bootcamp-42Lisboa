@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:50:34 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 14:16:45 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:47:39 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	ft_iterative_power(int nb, int power)
 
 /*int	main(void)
 {
-	printf("%i\n", ft_iterative_power(2, 18));
+	printf("%i\n", ft_iterative_power(2, 4));
 }*/

@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 02:12:09 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/22 13:30:43 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 00:33:09 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	map_to_base(char *base, int remainders[], int pos)
 	}
 }
 
-void	get_remainders(char *base, int nbr, int divider)
+void	get_remainders(char *base, long nbr, int divider)
 {
-	int	quotent;
-	int	remainders[256];
-	int	i;
+	long	quotent;
+	int		remainders[256];
+	int		i;
 
 	i = 0;
 	quotent = nbr;
@@ -71,20 +71,22 @@ int	check_base(char *base)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	int		base_len;
+	long	num;
 
 	base_len = 0;
+	num = nbr;
 	if (check_base(base))
 	{
 		while (base[base_len])
 			base_len++;
-		if (nbr < 0)
+		if (num < 0)
 		{
-			nbr *= -1;
+			num *= -1;
 			ft_putchar('-');
-			get_remainders(base, nbr, base_len);
+			get_remainders(base, num, base_len);
 		}
 		else
-			get_remainders(base, nbr, base_len);
+			get_remainders(base, num, base_len);
 	}
 }
 

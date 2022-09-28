@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 18:33:48 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/26 20:37:26 by rphuyal          ###   ########.fr       */
+/*   Created: 2022/09/26 18:50:10 by rphuyal           #+#    #+#             */
+/*   Updated: 2022/09/26 20:37:15 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-char	*ft_strdup(char *src)
+int	*ft_range(int min, int max)
 {
-	int		l;
-	char	*dub;
+	int	l;
+	int	i;
+	int	*range;
 
-	l = 0;
-	while (src[l])
-		l++;
-	dub = (char *)malloc(l * sizeof(char));
-	l = 0;
-	while (src[l])
+	l = max - min;
+	range = (int *)malloc(sizeof(int) * l);
+	i = 0;
+	while (i < l)
 	{
-		dub[l] = src[l];
-		l++;
+		range[i] = min + i;
+		i++;
 	}
-	dub[l] = '\0';
-	return (dub);
+	return (range);
 }
 
 /*int	main(void)
 {
-	char	str[] = "Copy this";
-	char	*dub;
+	int	*range;
+	int	l;
 
-	dub = ft_strdup(str);
-	printf("Copy recieved : %s\n", dub);
-	free(dub);
+	range = ft_range(-1, 10);
+	l = 0;
+	while (l < 11)
+	{
+		printf("%i\n", range[l]);
+		l++;
+	}
+	free(range);
 }*/

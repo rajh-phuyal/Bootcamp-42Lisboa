@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 13:47:44 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 13:49:15 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:47:08 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb == 1)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	int	res;
+
+	res = 1;
+	if (nb > 0)
+	{
+		res *= nb * ft_recursive_factorial(nb - 1);
+		nb--;
+	}
+	if (nb < 0)
+		return (0);
+	return (res);
 }
 
-/*int main(int argc, char *argv[])
+/*int main()
 {
 	printf("%i\n", ft_recursive_factorial(5));
 	return 0;

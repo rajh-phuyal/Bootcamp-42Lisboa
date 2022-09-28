@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:10:00 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 14:28:01 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:47:34 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,8 @@ int	ft_recursive_power(int nb, int power)
 	else
 		return (nb * ft_recursive_power(nb, power - 1));
 }
+
+/*int	main(void)
+{
+	printf("%i\n", ft_recursive_power(2, 4));
+}*/
