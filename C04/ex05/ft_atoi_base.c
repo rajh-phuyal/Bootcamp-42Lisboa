@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 23:21:47 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/25 22:55:27 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:55:10 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	scan_str(char *str)
 	int	nminus;
 
 	nminus = 0;
-	while (*str)
+	while (*str !(*str >= '0' && *str <= '9'))
 	{
 		if (*str == 45)
 			nminus += 1;

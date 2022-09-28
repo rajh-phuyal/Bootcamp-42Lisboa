@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 01:59:27 by rphuyal           #+#    #+#             */
-/*   Updated: 2022/09/28 16:30:59 by rphuyal          ###   ########.fr       */
+/*   Updated: 2022/09/28 21:34:42 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	put_in_malloc(char *our_str, char *str, char *sep, int inc, int size)
+void	put_in_malloc(char *our_str, char *str, char *sep, int end)
 {
 	int	i;
 
@@ -36,7 +36,7 @@ void	put_in_malloc(char *our_str, char *str, char *sep, int inc, int size)
 		i++;
 		str++;
 	}
-	if (inc != size - 2)
+	if (end != -1)
 	{
 		while (*sep)
 		{
@@ -57,8 +57,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	i = 0;
 	l = 0;
 	if (size == 0)
-		return (our_str);
-	while (i < size - 1)
+		return ((char *)malloc(sizeof(char)));
+	while (i < size)
 	{
 		l += ft_strlen(strs[i]);
 		i++;
@@ -66,15 +66,15 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	l += 1;
 	our_str = (char *)malloc(l * sizeof(char));
 	i = 0;
-	while (i < size - 1)
+	while (i < size)
 	{
-		put_in_malloc(our_str, strs[i], sep, i, size);
+		put_in_malloc(our_str, strs[i], sep, i - size);
 		i++;
 	}
 	return (our_str);
 }
 
-int		main(void)
+/*int		main(void)
 {
 	int		offset;
 	char	**strs;
@@ -84,16 +84,16 @@ int		main(void)
 	if (strs == NULL)
 		return (1);
 	offset = 0;
-	while (offset < 3)
+	while (offset < 4)
 	{
-		strs[offset] = "466564";
+		strs[offset] = "abc";
 		offset++;
 	}
-	res_str = ft_strjoin(3, strs, "----");
+	res_str = ft_strjoin(3, strs, " - ");
 	if (res_str == NULL)
 		return (1);
 	printf("res: %s\n", res_str);
 	free(strs);
 	free(res_str);
 	return (0);
-}
+}*/
